@@ -23,7 +23,7 @@
         }
 
         header {
-            padding: 25px 20px;
+            padding: 20px;
             text-align: center;
             border-bottom: 1px solid #222;
             display: flex;
@@ -32,88 +32,72 @@
             gap: 10px;
         }
 
-        .logo-img {
-            height: 60px; /* Taille ajustable selon ton logo */
-            width: auto;
-        }
+        .logo-img { height: 50px; width: auto; }
+        .logo-text { font-size: 1.2rem; font-weight: 800; color: var(--gold); letter-spacing: 4px; text-transform: uppercase; }
 
-        .logo-text {
-            font-size: 1.2rem;
-            font-weight: 800;
+        /* Badge Lancement */
+        .status-badge {
+            background: rgba(212, 175, 55, 0.1);
             color: var(--gold);
-            letter-spacing: 4px;
+            border: 1px solid var(--gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        .hero { padding: 30px 20px; text-align: center; }
+        .hero h1 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 10px; text-transform: uppercase; }
+        .hero p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 20px; }
+
+        .section-title {
+            padding: 0 20px;
+            font-size: 1.1rem;
+            color: var(--gold);
             text-transform: uppercase;
-        }
-
-        .hero {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 1.8rem;
-            line-height: 1.2;
+            letter-spacing: 1px;
             margin-bottom: 15px;
-            text-transform: uppercase;
+            margin-top: 30px;
         }
 
-        .hero p {
-            color: var(--text-dim);
-            font-size: 1rem;
-            margin-bottom: 25px;
-        }
-
-        .pricing-container {
-            padding: 0 15px;
-        }
-
+        .pricing-container { padding: 0 15px; }
         .card {
             background: var(--card-bg);
             border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
             border: 1px solid #333;
             position: relative;
         }
+        .card.featured { border: 2px solid var(--gold); }
+        .card h3 { font-size: 1.1rem; margin-bottom: 5px; }
+        .price { font-size: 1.6rem; color: var(--gold); font-weight: bold; margin-bottom: 10px; }
+        .price span { font-size: 0.8rem; color: var(--text-dim); }
 
-        .card.featured {
-            border: 2px solid var(--gold);
-        }
-
-        .badge {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: var(--gold);
-            color: #000;
-            font-size: 0.7rem;
-            font-weight: bold;
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
-
-        .card h3 { font-size: 1.2rem; margin-bottom: 5px; }
-        .price { 
-            font-size: 1.8rem; 
-            color: var(--gold); 
-            font-weight: bold; 
-            margin-bottom: 15px; 
-        }
-        .price span { font-size: 0.9rem; color: var(--text-dim); }
-
-        .features-list { list-style: none; margin-bottom: 20px; }
+        .features-list { list-style: none; margin-bottom: 15px; }
         .features-list li {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--text-dim);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
         }
-        .features-list li::before {
-            content: "•";
-            color: var(--gold);
-            margin-right: 10px;
+        .features-list li::before { content: "•"; color: var(--gold); margin-right: 8px; }
+
+        /* Section Sécurité */
+        .trust-section {
+            margin: 20px 15px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid var(--gold);
         }
+        .trust-item { margin-bottom: 15px; display: flex; gap: 10px; align-items: flex-start; }
+        .trust-icon { font-size: 1.2rem; }
+        .trust-text h4 { font-size: 0.9rem; margin-bottom: 3px; color: var(--gold); }
+        .trust-text p { font-size: 0.85rem; color: var(--text-dim); }
 
         .card-btn {
             display: block;
@@ -121,24 +105,23 @@
             color: var(--gold);
             border: 1px solid var(--gold);
             text-align: center;
-            padding: 12px;
+            padding: 10px;
             border-radius: 6px;
             font-weight: bold;
+            font-size: 0.9rem;
         }
 
-        /* Footer restauré */
         footer {
             text-align: center;
             padding: 40px 20px;
             border-top: 1px solid #333;
-            margin-top: 20px;
+            margin-top: 40px;
             color: var(--text-dim);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
-        .footer-contact { margin-bottom: 15px; }
+        .footer-contact { margin-bottom: 15px; line-height: 1.6; }
         .footer-contact strong { color: var(--gold); }
 
-        /* Bouton WhatsApp Flottant */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -160,8 +143,9 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="SarrLux Logo" class="logo-img">
+        <img src="logo.png" alt="" class="logo-img" onerror="this.style.display='none'">
         <div class="logo-text">SARRLUX</div>
+        <div class="status-badge">🚀 SERVICES DÉMARRENT BIENTÔT</div>
     </header>
 
     <section class="hero">
@@ -169,6 +153,25 @@
         <p>Expertise & Convoyage à Dakar. On récupère, on gère, on vous la ramène.</p>
     </section>
 
+    <h2 class="section-title">Confiance & Sécurité</h2>
+    <div class="trust-section">
+        <div class="trust-item">
+            <span class="trust-icon">🆔</span>
+            <div class="trust-text">
+                <h4>Transparence Totale</h4>
+                <p>Copie de la pièce d'identité et du permis de conduire du chauffeur transmise avant chaque mission.</p>
+            </div>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">📜</span>
+            <div class="trust-text">
+                <h4>Cadre Légal</h4>
+                <p>Signature d'un contrat conventionnel pour garantir la protection de votre véhicule.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Nos Tarifs</h2>
     <div class="pricing-container">
         <div class="card">
             <h3>Standard</h3>
@@ -176,13 +179,12 @@
             <ul class="features-list">
                 <li>Convoyage aller-retour</li>
                 <li>Attente au Service des Mines</li>
-                <li>Rapport de visite technique</li>
+                <li>Rapport de visite</li>
             </ul>
-            <a href="https://wa.me/221776729740?text=Option%20Standard" class="card-btn">Choisir Standard</a>
+            <a href="https://wa.me/221776729740?text=Option%20Standard" class="card-btn">Réserver</a>
         </div>
 
         <div class="card featured">
-            <div class="badge">LE PLUS PRISÉ</div>
             <h3>Premium</h3>
             <div class="price">15 000 <span>FCFA</span></div>
             <ul class="features-list">
@@ -190,17 +192,7 @@
                 <li>Nettoyage carrosserie</li>
                 <li>Prise en charge à domicile</li>
             </ul>
-            <a href="https://wa.me/221776729740?text=Option%20Premium" class="card-btn" style="background:var(--gold); color:#000;">Choisir Premium</a>
-        </div>
-
-        <div class="card">
-            <h3>Urgence 24h</h3>
-            <div class="price">20 000 <span>FCFA</span></div>
-            <ul class="features-list">
-                <li>Passage prioritaire</li>
-                <li>Suivi en temps réel</li>
-            </ul>
-            <a href="https://wa.me/221776729740?text=Option%20Urgence" class="card-btn">Choisir Urgence</a>
+            <a href="https://wa.me/221776729740?text=Option%20Premium" class="card-btn" style="background:var(--gold); color:#000;">Réserver Premium</a>
         </div>
     </div>
 
@@ -216,7 +208,7 @@
     </footer>
 
     <a href="https://wa.me/221776729740?text=Bonjour%20SarrLux,%20je%20souhaite%20réserver%20un%20convoyage." class="whatsapp-float">
-        RÉSERVER VIA WHATSAPP
+        CONTACTER SUR WHATSAPP
     </a>
 
 </body>
